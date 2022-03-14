@@ -17,7 +17,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   const amount = parseInt(input.value);
   if (isNaN(amount) || amount < 0 || amount > text.length) {
-    const random = Math.floor(Math.random() * 9);
+    const random = Math.floor(Math.random() * text.length);
     return (result.innerHTML = `<p>${text[random]}</p>`);
   } else {
     let tempText = text.slice(0, amount);
